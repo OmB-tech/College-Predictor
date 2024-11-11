@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligible Colleges</title>
+    <link rel="stylesheet" href="/static/styles2.css"> 
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Eligible Colleges</h2>
+        {% if results %}
+            <div class="table-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search" onkeyup="filterTable()">
+                </div>
+                <table id="collegeTable">
+                    <thead>
+                        <tr>
+                            <th>College Name</th>
+                            <th>Branch</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for college in results %}
+                            <tr>
+                                <td>{{ college['college_name'] }}</td>
+                                <td>{{ college['branch'] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p>No colleges found matching your criteria. Try adjusting your score or category.</p>
+        {% endif %}
+        
+        <div class="button-container">
+            <a href="/" class="back-button">Back to Home</a>
+        </div>
+    </div>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

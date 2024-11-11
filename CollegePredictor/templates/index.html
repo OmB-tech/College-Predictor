@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegePredictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/results" method="post">
+            <h2>College Predictor</h2>
+            <div class="input-field">
+                <input type="number" name="mhcet_score" step="0.00001" required>
+                <label for="mhcet_score">Enter your MHTCET-Score</label>
+            </div>
+            <div class="input-field">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select your category</option>
+                    <option value="GOPENO">GOPENO</option>
+                    <option value="LOPENO">LOPENO</option>
+                    <option value="EWS">EWS</option>
+                    <option value="GOBCO">GOBCO</option>
+                    <option value="LOBCO">LOBCO</option>
+                    <option value="GSCO">GSCO</option>
+                    <option value="GSTO">GSTO</option>
+                    <option value="GNT1O">GNT1O</option>
+                    <option value="LNT1O">LNT1O</option>
+                    <option value="GNT2O">GNT2O</option>
+                    <option value="LNT2O">LNT2O</option>
+                    <option value="GNT3O">GNT3O</option>
+                    <option value="LNT3O">LNT3O</option>
+                    <option value="PWDOBCS">PWDOBCS</option>
+                    <option value="PWDOPENS">PWDOPENS</option>
+                    <option value="TFWS">TFWS</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>
